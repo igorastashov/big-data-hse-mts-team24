@@ -28,6 +28,9 @@ exit
 ```
 
 ```
+# Вход на сервер в jump node
+ssh team@176.109.91.35
+
 sudo nano /etc/postgresql/16/main/postgresql.conf
 listen_addresses = 'team-24-nn' # А конфиге укажем
 ```
@@ -197,9 +200,10 @@ cd ..
 ```
 # Запустим Hive сервер
 bin/schematool -dbType postgres -initSchema
+bin/schematool -dbType postgres -upgradeSchema -dryRun # Если возникнут проблемы
 hive --hiveconf hive.server2.enable.doAs=false --hiveconf hive.security.authorization.enabled=false --service hiveserver2 1>> /tmp/hs2.log 2>> /tmp/hs2.log &
 
-jps
+jps # Jps RunJar на выводе
 ```
 
 
