@@ -125,6 +125,7 @@ df = df.repartition(3, "Pclass")
 print(f"Число партиций: {df.rdd.getNumPartitions()}")
 
 df.write.parquet("/input/parquet")
+df.write.saveAsTable("table")
 
 spark.stop()
 ```
