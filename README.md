@@ -16,4 +16,4 @@
 - hw02 -- Развертывание YARN и выполнение распределенного MapReduce (см. https://github.com/BangoSkunk/bigdata_hw/)
 - hw03 -- Развертывание Apache Hive
 - hw04 -- Apache Spark
-- hw05 -- Prefect
+- hw05 -- Airflow
